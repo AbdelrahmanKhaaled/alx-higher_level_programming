@@ -8,14 +8,15 @@
 
 int check_cycle(listint_t *list)
 {
-	listint_t *current;
+	listint_t *current, *speed;
 
-	current = list;
-	while (current != NULL)
+	current = speed = list;
+	while (speed != NULL && speed -> next != NULL)
 	{
-		if (current == list)
-			return 1;
 		current = current -> next;
+		speed = speed -> next -> next;
+		if (current == speed)
+			return 1;
 	}
 	return 0;
 }
