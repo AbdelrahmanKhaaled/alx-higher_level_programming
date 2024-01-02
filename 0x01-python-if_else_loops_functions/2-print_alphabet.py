@@ -2,3 +2,4 @@
 num = 97
 while (num <= 122):
     print("{:c}".format(num), end="")
+    num++
