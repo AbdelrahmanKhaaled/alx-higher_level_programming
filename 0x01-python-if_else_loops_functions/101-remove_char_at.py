@@ -5,4 +5,3 @@ def remove_char_at(str, n):
         if (num != n):
             name[count] = str[num]
             count = count + 1
-        else:
