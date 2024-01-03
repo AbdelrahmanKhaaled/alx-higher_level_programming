@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-for num in range(99):
+for num in range(100):
     if (num < 10):
         print(f"0{num}, ")
     else:
-        print(f"{num}, ")
-print(99)
+        print("{}" if num >= 99 f"{num}, " else "99")
         
