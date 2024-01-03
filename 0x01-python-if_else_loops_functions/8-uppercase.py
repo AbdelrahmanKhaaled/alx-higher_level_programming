@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def uppercase(str):
     for n in range(len(str)):
-        ss = "{:c}\n".format(ord(str[n]) - 32)
+        ss = f"{:c}\n".format(ord(str[n]) - 32)
         f = False
         if (n != len(str) - 1):
             f = True
