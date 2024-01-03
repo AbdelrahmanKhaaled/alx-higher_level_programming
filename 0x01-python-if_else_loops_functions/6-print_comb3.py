@@ -4,5 +4,5 @@ for num in range(9)
         if (num == num2 and num > num2)
             continue
         else
-            print(f"{num}{num2}, ", end="")
+            print("{:d}{:d}, ".format(num,num2), end="")
 print(89)
