@@ -10,7 +10,7 @@ if __name__ == "__main__":
     if args[1] == "+":
         print("{} + {} = {}".format(int(args[0]), int(args[2]), add(int(args[0]), int(args[2]))))
     elif args[1] == "-":
-        print("{} - {} = {}".format(int(args[0]), int(args[2]), sub(int(args[0]), int(args[2]))))i
+        print("{} - {} = {}".format(int(args[0]), int(args[2]), sub(int(args[0]), int(args[2]))))
     elif args[1] == "*":
         print("{} * {} = {}".format(int(args[0]), int(args[2]), mul(int(args[0]), int(args[2]))))
     elif args[1] == "/":
