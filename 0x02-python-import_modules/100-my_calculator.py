@@ -10,12 +10,16 @@ if __name__ == "__main__":
     else:
         if args[2] == "+":
             print("{} + {} = {}".format(args[1], args[3], add(args[1], args[3])))
+            exit(0)
         elif args[2] == "-":
             print("{} - {} = {}".format(args[1], args[3], sub(args[1], args[3])))
+            exit(0)
         elif args[2] == "*":
             print("{} * {} = {}".format(args[1], args[3], mul(args[1], args[3])))
+            exit(0)
         elif args[2] == "/":
             print("{} / {} = {}".format(args[1], args[3], div(args[1], args[3])))
+            exit(0)
         else:
             print("Unknown operator. Available operators: +, -, * and /")
             exit(1)
