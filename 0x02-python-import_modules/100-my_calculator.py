@@ -3,18 +3,20 @@ if __name__ == "__main__":
     import sys
     from calculator_1 import add, sub, mul, div
 
-    args = sys.argv[1:]
-    if len(args) != 3:
+    if len(sys.argv) != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
-    if args[1] == "+":
-        print("{} + {} = {}".format(int(args[0]), int(args[2]), add(int(args[0]), int(args[2]))))
-    elif args[1] == "-":
-        print("{} - {} = {}".format(int(args[0]), int(args[2]), sub(int(args[0]), int(args[2]))))
-    elif args[1] == "*":
-        print("{} * {} = {}".format(int(args[0]), int(args[2]), mul(int(args[0]), int(args[2]))))
-    elif args[1] == "/":
-        print("{} / {} = {}".format(int(args[0]), int(args[2]), div(int(args[0]), int(args[2]))))
+    a = int(sys.argv[1])
+    b = int(sys.argv[3])
+    oper = sys.argv[2]
+    if oper == "+":
+        print("{} + {} = {}".format(a, b, add(a, b)))
+    elif oper == "-":
+        print("{} - {} = {}".format(a, b, sub(a, b)))
+    elif oper == "*":
+        print("{} * {} = {}".format(a, b, mul(a, b)))
+    elif oper == "/":
+        print("{} / {} = {}".format(a, b, div(a, b)))
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
