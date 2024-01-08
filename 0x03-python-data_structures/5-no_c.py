@@ -10,3 +10,4 @@ def no_c(my_string):
                 end = -1
          end += 1;
     str2 += my_string
+    return str2
