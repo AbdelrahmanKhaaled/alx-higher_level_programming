@@ -19,11 +19,11 @@ int is_palindrome(listint_t **head)
 		current = current->next;
 	}
 	arr = malloc(count * sizeof(int));
-	if (arr == NULL) {
+	if (arr == NULL)
+	{
 		printf("Memory allocation failed.\n");
 		return (0);
 	}
-
 	current = *head;
 	count = 0;
 	while (current != NULL)
