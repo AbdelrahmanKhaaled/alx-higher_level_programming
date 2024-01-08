@@ -4,20 +4,25 @@
  * is_palindrome - checks if a singly linked list is a palindrome.
  *
  * @head: checks input of function
- * * Return: 0 if it is not a palindrome, 1 if it is a palindrome
+ * Return: 0 if it is not a palindrome, 1 if it is a palindrome
 */
 
 int is_palindrome(listint_t **head)
 {
 	listint_t *current = *head;
 	int count = 0, i;
+	int *arr;
 
 	while (current != NULL)
 	{
 		count++;
 		current = current->next;
 	}
-	int arr[count];
+	arr = malloc(count * sizeof(int));
+	if (arr == NULL) {
+		printf("Memory allocation failed.\n");
+		return (0);
+	}
 
 	current = *head;
 	count = 0;
