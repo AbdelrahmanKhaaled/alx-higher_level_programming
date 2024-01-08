@@ -8,6 +8,6 @@ def no_c(my_string):
                 str2 += my_string[:end]
                 my_string = my_string[end + 1:]
                 end = -1
-        end += 1;
+        end += 1
     str2 += my_string
     return str2
