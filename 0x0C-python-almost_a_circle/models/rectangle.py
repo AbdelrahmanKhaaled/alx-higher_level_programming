@@ -2,6 +2,7 @@
 '''Module for rectangle class'''
 from models.base import Base
 
+
 class Rectangle(Base):
     '''A rectangleclass.'''
 
