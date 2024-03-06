@@ -2,7 +2,7 @@
 '''Module for Base class.'''
 
 
-class Base
+class Base:
     '''A representation of the base of our OOP hierarchy.'''
     
     __nb_objects = 0
