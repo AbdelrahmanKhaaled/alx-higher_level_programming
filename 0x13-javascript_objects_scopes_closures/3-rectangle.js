@@ -10,11 +10,12 @@ module.exports = class Rectangle {
 	}
 
 	print() {
-		for (i = 0; i < this.width; i++) {
-			if (i != this.width - 1) {
-				process.stdout.write("X");
-			else
-				console.log("X");
+		for (let i = 0; i < this.height; i++) {
+			for (let j = 0; j < this.width; j++) {
+				if (j != this.width - 1)
+					process.stdout.write("X");
+				else
+					console.log("X");
 			}
 		}
 	}
