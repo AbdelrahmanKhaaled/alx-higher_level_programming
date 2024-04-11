@@ -2,7 +2,7 @@
 
 const SquareOld = require('./5-square');
 
-module.exports = class Square extends SquareOld {
+class Square extends SquareOld {
 
 	constructor(size) {
 		super(size);
@@ -22,3 +22,5 @@ module.exports = class Square extends SquareOld {
 		}
 	}
 }
+
+module.exports = class Square;
