@@ -1,0 +1,6 @@
+#!/usr/bin/node
+
+exports.logMe = function (item) {
+	static num = 0;
+	console.log(num++ + ": " + item);
+}
