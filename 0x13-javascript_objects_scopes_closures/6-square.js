@@ -13,8 +13,8 @@ class Square extends SquareOld {
       let str = '';
       for (let j = 0; j < this.size; j++) {
         if (c === undefined)
-          c = "X";
-	str += 'X';
+          c = 'X';
+	str += c;
       }
       console.log(str);
     }
