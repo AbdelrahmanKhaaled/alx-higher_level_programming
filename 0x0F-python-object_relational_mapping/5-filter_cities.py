@@ -11,9 +11,9 @@ def my_filter_states(username, password, database, searchName):
     cursor = db.cursor()
     cursor.execute("SELECT C.name from cities C, states S where S.name = '{}' and S.id = state_id order by id;".format(searchName))
     state = cursor.fetchall()
-    for a in range(state.length - 1):
-        print(state[a], endl=", ")
-    print(state[state.length - 1])
+    for a in range(len(state) - 1):
+        print(state[a], end=", ")
+    print(state[len)state) - 1])
     db.close()
 
 if __name__ == '__main__':
