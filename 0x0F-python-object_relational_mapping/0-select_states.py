@@ -5,8 +5,7 @@ import MySQLdb
 
 def list_AllStates(username, password, database):
 
-    db = MySQLdb.connect(host="localhost", user=username,
-                            passwd=password, db=database, port=3306)
+    db = MySQLdb.connect(host="localhost", user=username, passwd=password, db=database, port=3306)
 
     cursor = db.cursor()
     cursor.execute("SELECT * from states;")
