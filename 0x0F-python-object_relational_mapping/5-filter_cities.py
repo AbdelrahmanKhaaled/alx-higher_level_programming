@@ -13,7 +13,7 @@ def my_filter_states(username, password, database, searchName):
     state = cursor.fetchall()
     for a in range(len(state) - 1):
         print(state[a], end=", ")
-    print(state[len)state) - 1])
+    print(state[len(state) - 1])
     db.close()
 
 if __name__ == '__main__':
