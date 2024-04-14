@@ -5,16 +5,16 @@ import MySQLdb
 
 def list_AllStates(username, password, database):
 
-    db = MySQLdb.connect(host="localhost", user=username, passwd=password, db=database, port=3306)
+    db = MySQLdb.connect(host='localhost',  port=3306, user=username, passwd=password, db=database)
 
     cursor = db.cursor()
-    cursor.execute("SELECT * from states;")
+    cursor.execute("SELECT * from states oreder by id asc;")
     state = cursor.fetchall()
     for s in state:
         print(s)
     db.close()
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
