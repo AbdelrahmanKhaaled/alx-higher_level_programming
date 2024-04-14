@@ -8,7 +8,7 @@ def cities_by_state(username, password, database):
     db = MySQLdb.connect(host='localhost',  port=3306, user=username, passwd=password, db=database)
 
     cursor = db.cursor()
-    cursor.execute("SELECT * from cities, states where state_id = id order by id;")
+    cursor.execute("SELECT C.id, C.name, S.name from cities C, states S where state_id = id order by id;")
     state = cursor.fetchall()
     for s in state:
         print(s)
