@@ -10,10 +10,11 @@ def filter_states(u, p, d):
     db = MySQLdb.connect(host='localhost', port=3306, user=u, passwd=p, db=d)
 
     cursor = db.cursor()
-    cursor.execute("SELECT * from states where name like 'N%' order by id;")
+    cursor.execute("SELECT * from states order by id;")
     states = cursor.fetchall()
     for state in states:
-        print(state)
+        if (state[1][0] == "N")
+            print(state)
     db.close()
 
 
