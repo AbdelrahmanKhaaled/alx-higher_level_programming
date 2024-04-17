@@ -4,7 +4,7 @@ import sys
 import MySQLdb
 
 
-def list_AllStates(username, password, database):
+def list_AllStates(u, p, d):
 
     db = MySQLdb.connect(host='localhost', port=3306, user=u, passwd=p, db=d)
 
