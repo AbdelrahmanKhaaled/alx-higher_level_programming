@@ -13,7 +13,7 @@ def filter_states(u, p, d):
     cursor.execute("SELECT * from states order by id;")
     states = cursor.fetchall()
     for state in states:
-        if (state[1][0] == "N")
+        if (state[1][0] == "N"):
             print(state)
     db.close()
 
