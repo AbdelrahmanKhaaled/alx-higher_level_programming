@@ -4,9 +4,10 @@ with N (upper N) from the database. '''
 import sys
 import MySQLdb
 
-def filter_states(username, password, database):
 
-    db = MySQLdb.connect(host='localhost', port=3306, user=username, passwd=password, db=database)
+def filter_states(u, p, d):
+
+    db = MySQLdb.connect(host='localhost', port=3306, user=u, passwd=p, db=d)
 
     cursor = db.cursor()
     cursor.execute("SELECT * from states where name like 'N%' order by id;")
@@ -14,6 +15,7 @@ def filter_states(username, password, database):
     for state in states:
         print(state)
     db.close()
+
 
 if __name__ == "__main__":
     username = sys.argv[1]
