@@ -17,4 +17,3 @@ req = urllib.request.Request(url, data=data, method='POST')
 with urllib.request.urlopen(req) as response:
     body_response = response.read().decode('utf-8')
     print("Your email is:", email)
-    print(body_response)
