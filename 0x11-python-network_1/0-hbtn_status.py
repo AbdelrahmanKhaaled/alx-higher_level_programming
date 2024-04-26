@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+"""Module for fetches https://alx-intranet.hbtn.io/status"""
 import urllib.request
+
 if __name__ == "__main__":
     url = f'https://api.github.com/users/{username}'
     header = {'Authorization': f'Bearer {tocken}'}
