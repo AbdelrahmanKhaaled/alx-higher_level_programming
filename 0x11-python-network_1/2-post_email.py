@@ -16,3 +16,4 @@ data = urllib.parse.urlencode({'email': email}).encode()
 with urllib.request.urlopen(url, data=data) as response:
     body_response = response.read().decode('utf-8')
     print("Your email is:", email)
+    print(body_response)
