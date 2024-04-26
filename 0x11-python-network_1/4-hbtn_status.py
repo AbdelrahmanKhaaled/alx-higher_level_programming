@@ -8,5 +8,5 @@ url = "https://alx-intranet.hbtn.io/status"
 response = requests.get(url)
 
 print("Body response:")
-print("- type:", type(response.content))
-print("- content:", response.content.decode())
+print("\t- type:", type(response.text))
+print("\t- content:", response.text)
