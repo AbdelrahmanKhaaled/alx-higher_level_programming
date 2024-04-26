@@ -16,4 +16,3 @@ try:
         print(body_response)
 except urllib.error.HTTPError as e:
     print("Error code:", e.code)
-
