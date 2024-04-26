@@ -9,7 +9,7 @@ def get_request_id(url):
         response = requests.get(url)
         request_id = response.headers.get('X-Request-Id')
         if request_id:
-            print("X-Request-Id:", request_id)
+            print(request_id)
         else:
             print("X-Request-Id not found in response headers.")
     except requests.RequestException as e:
