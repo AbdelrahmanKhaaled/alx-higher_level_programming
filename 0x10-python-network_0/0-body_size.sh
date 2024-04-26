@@ -1,17 +1,14 @@
 #!/bin/bash
 
 if [ $# -ne 1 ]; then
-	  echo "Usage: $0 <URL>"
-	    exit 1
+  echo "Usage: $0 <URL>"
+  exit 1
 fi
 
 url=$1
 
-response=$(mktemp)
-curl -s -o "$response" "$url"
+headers=$(curl -sI "$url")
 
-size=$(wc -c < "$response")
+content_length=$(echo "$headers" | grep -i "Content-Length" | awk '{print $2}' | tr -d '\r')
 
-echo "Size of the response body: $size bytes"
-
-rm "$response"
+echo "Size of the response body: $content_length bytes"
