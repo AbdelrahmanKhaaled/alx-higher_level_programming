@@ -16,5 +16,5 @@ if __name__ == "__main__":
             print(request_id)
         else:
             print("X-Request-Id not found in response headers.")
-        except requests.RequestException as e:
-            print("Error fetching URL:", e)
+    except requests.RequestException as e:
+        print("Error fetching URL:", e)
